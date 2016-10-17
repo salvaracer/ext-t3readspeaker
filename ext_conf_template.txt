@@ -1,0 +1,5 @@
+# cat=ReadSpeaker/hint; type=boolean; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:extconf.hint
+iUnderstand = 1
+
+# cat=ReadSpeaker/hint2; type=boolean; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:extconf.hint2
+iUnderstand2 = 1

@@ -1,0 +1,73 @@
+# Include Ext CSS
+#plugin.tx_t3readspeaker._CSS_DEFAULT_STYLE ()
+# Include ReadSpeaker JS
+page.includeJS {
+    t3readspeaker           = //f1-eu.readspeaker.com/script/35/ReadSpeaker.js?pids=embhl
+    t3readspeaker.external  = 1
+}
+# Current url encoded
+lib.encodedCurrentUrl = TEXT
+lib.encodedCurrentUrl {
+	stdWrap.data = getIndpEnv:TYPO3_REQUEST_URL
+	stdWrap.rawUrlEncode = 1
+}
+# ReadSpeaker Main Button
+lib.t3readspeaker = COA
+lib.t3readspeaker {
+	wrap = <div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve"><a rel="nofollow"class="rsbtn_play" accesskey="L" title="Text vorlesen" href="//app-eu.readspeaker.com/cgi-bin/rsent|"><span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>Vorlesen</span></span></span><span class="rsbtn_right rsimg rsplay rspart"></span></a></div>
+	# Your readspeaker customer id, from constants editor
+	20 = TEXT
+	20 {
+		value = {$plugin.tx_t3readspeaker.settings.customerid}
+		required = 1
+		wrap = ?customerid=|
+	}
+	30 = TEXT
+	30 {
+		data = levelfield : -1 , tx_t3readspeaker_lang , slide
+		required = 1
+		wrap = &amp;lang=|
+	}
+	40 = TEXT
+	40 {
+		data = levelfield : -1 , tx_t3readspeaker_voice , slide
+		required = 1
+		wrap = &amp;voice=|
+	}
+	# CSS ID in HTML, from constants editor
+	50 = TEXT
+	50 {
+		value = {$plugin.tx_t3readspeaker.settings.defaultReadId}
+		required = 1
+		wrap = &amp;readid=|
+	}
+	60 = TEXT
+	60 < lib.encodedCurrentUrl
+	60 {
+		required = 1
+		wrap = &amp;url=|
+	}
+}
+# ReadSpeaker Document Reader
+# TODO: Implement in RTE & CE Uploads
+lib.t3readspeakerDoc = COA
+lib.t3readspeakerDoc {
+	wrap = <a rel="nofollow" href="//docreader.readspeaker.com/docreader/?cid=|" onclick="window.open(this.href, 'dcrwin'); return false;" title="Verweis volesen" style="text-decoration: none; margin-left: 6px; color: #3333aa; font-weight: bold;"> <img src="/typo3conf/ext/t3readspeaker/ext_icon.gif" style="border-style: none; vertical-align: text-bottom;" alt="ReadSpeaker"> Vorlesen</a>
+	20 = TEXT
+	20 {
+		data = levelfield : -1 , tx_t3readspeaker_lang , slide
+		required = 1
+		wrap = &amp;lang=
+	}
+	40 = TEXT
+	40 {
+		data = levelfield : -1 , tx_t3readspeaker_voice , slide
+		required = 1
+		wrap = &voice=|
+	}
+	50 = TEXT
+	50 {
+		value = www.vrjunkie.de%2Ffileadmin%2Fuser_upload%2Fdummy%2Fdummy_pdf_deutsch.pdf
+		wrap = &amp;url=|
+	}
+}
