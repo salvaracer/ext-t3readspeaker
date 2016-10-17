@@ -6,11 +6,6 @@
 Will add the ReadSpeaker Service to your website. Easy to use, multi language and many voice options.
 
 
-## Screenshots
-
-Coming soon
-
-
 ## Installation
 
 1.  Install this extension
@@ -48,4 +43,22 @@ https://typo3.org/extensions/repository/view/typoscript2ce
 -   **TYPO3 Extension Documentation:**
 
     https://docs.typo3.org/typo3cms/extensions/t3readspeaker/
+
+## Screenshots
+
+-   **Fluid usage**
+
+    ![Fluid usage](https://picload.org/image/rdlrawgd/fluid.png)
+
+-   **Frontend closed**
+
+    ![Frontend closed](https://picload.org/image/rdlrawgc/rsclosed.png)
+
+-   **Frontend reading**
+
+    ![Frontend reading](https://picload.org/image/rdlrawgp/rsreading.png)
+
+-   **Constant Editor**
+
+    ![Constant Editor](https://picload.org/image/rdlrawgo/constants.png)
 
