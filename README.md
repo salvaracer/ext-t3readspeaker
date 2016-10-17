@@ -46,19 +46,7 @@ https://typo3.org/extensions/repository/view/typoscript2ce
 
 ## Screenshots
 
--   **Fluid usage**
+-   **See documentation for screenshots:**
 
-    ![Fluid usage](https://picload.org/image/rdlrawgd/fluid.png)
-
--   **Frontend closed**
-
-    ![Frontend closed](https://picload.org/image/rdlrawgc/rsclosed.png)
-
--   **Frontend reading**
-
-    ![Frontend reading](https://picload.org/image/rdlrawgp/rsreading.png)
-
--   **Constant Editor**
-
-    ![Constant Editor](https://picload.org/image/rdlrawgo/constants.png)
+    https://github.com/salvaracer/ext-t3readspeaker/blob/master/Documentation/Introduction/Index.rst
 
