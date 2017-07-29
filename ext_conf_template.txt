@@ -1,5 +1,2 @@
-# cat=ReadSpeaker/hint; type=boolean; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:extconf.hint
-iUnderstand = 1
-
-# cat=ReadSpeaker/hint2; type=boolean; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:extconf.hint2
-iUnderstand2 = 1
+# cat=demo/file/1; type=user[EXT:t3readspeaker/class.tx_t3readspeaker.php:&tx_t3readspeaker->readmemd]; label=README.MD
+readmemd = 

@@ -18,4 +18,4 @@ Links
 	https://forge.typo3.org/projects/extension-t3readspeaker/issues
 
 :Git Repository:
-	https://github.com/salvaracer/t3readspeaker
+	https://github.com/salvaracer/ext-t3readspeaker

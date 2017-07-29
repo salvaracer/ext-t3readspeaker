@@ -1,16 +1,19 @@
 # Include Ext CSS
 #plugin.tx_t3readspeaker._CSS_DEFAULT_STYLE ()
+
 # Include ReadSpeaker JS
 page.includeJS {
     t3readspeaker           = //f1-eu.readspeaker.com/script/35/ReadSpeaker.js?pids=embhl
     t3readspeaker.external  = 1
 }
+
 # Current url encoded
 lib.encodedCurrentUrl = TEXT
 lib.encodedCurrentUrl {
 	stdWrap.data = getIndpEnv:TYPO3_REQUEST_URL
 	stdWrap.rawUrlEncode = 1
 }
+
 # ReadSpeaker Main Button
 lib.t3readspeaker = COA
 lib.t3readspeaker {
@@ -48,6 +51,7 @@ lib.t3readspeaker {
 		wrap = &amp;url=|
 	}
 }
+
 # ReadSpeaker Document Reader
 # TODO: Implement in RTE & CE Uploads
 lib.t3readspeakerDoc = COA
@@ -67,7 +71,7 @@ lib.t3readspeakerDoc {
 	}
 	50 = TEXT
 	50 {
-		value = www.vrjunkie.de%2Ffileadmin%2Fuser_upload%2Fdummy%2Fdummy_pdf_deutsch.pdf
+		value = %2Ffileadmin%2Fuser_upload%2Fdummy%2Fdummy_pdf_deutsch.pdf
 		wrap = &amp;url=|
 	}
 }
