@@ -26,6 +26,7 @@ class tx_t3readspeaker {
 		$code = str_replace($search, $replace, $code);
 
 		$code = stripcslashes(file_get_contents('https://helloacm.com/api/markdown/?cached&s='.$code));
+			$code = (!empty($code)) ? $code : 'Sorry, the preview could not be generated.';
 
 		return $code;
 	}

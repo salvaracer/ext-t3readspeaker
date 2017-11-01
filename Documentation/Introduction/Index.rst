@@ -20,6 +20,13 @@ What does it do?
 Will add the ReadSpeaker Service to your website. Easy to use, multi language and many voice options.
 
 
+Watch the ReadSpeaker webReader introduction video: https://www.youtube.com/watch?v=zMtpLuOJ3m8&feature=youtu.be
+
+.. figure:: ../Images/webreader_yt.jpg
+   :width: 689px
+   :alt: ReadSpeaker webReader introduction video
+
+
 .. _screenshots:
 
 Screenshots
