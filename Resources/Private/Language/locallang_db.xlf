@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-23T20:19:43Z" product-name="t3readspeaker">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-11-01T20:19:43Z" product-name="t3readspeaker">
 		<header/>
 		<body>
 			<trans-unit id="common.listen">
@@ -21,6 +21,9 @@
 			<trans-unit id="constants.docReaderCode">
 				<source><![CDATA[DocReader Code (you can find in ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></source>
 			</trans-unit>
+			<trans-unit id="constants.useOldApi">
+				<source><![CDATA[Check this, if you want to use the old readspeaker button.]]></source>
+			</trans-unit>
 			<trans-unit id="extconf.hint">
 				<source><![CDATA[Use the constant editor to set up this extension. ("Template" -> "Constant Editor" -> "ReadSpeaker")]]></source>
 			</trans-unit>
@@ -29,98 +32,29 @@
 			</trans-unit>
 
 			<!-- Languages -->
-			<trans-unit id="es_us">
-				<source>American Spanish</source>
-			</trans-unit>
-			<trans-unit id="ar_ar">
-				<source>Arabic</source>
-			</trans-unit>
-			<trans-unit id="en_au">
-				<source>Australian English</source>
-			</trans-unit>
-			<trans-unit id="eu_es">
-				<source>Basque</source>
-			</trans-unit>
 			<trans-unit id="pt_br">
 				<source>Brazilian Portuguese</source>
-			</trans-unit>
-			<trans-unit id="fr_ca">
-				<source>Canadian French</source>
-			</trans-unit>
-			<trans-unit id="ca_es">
-				<source>Catalan and Valencian</source>
-			</trans-unit>
-			<trans-unit id="es_co">
-				<source>Colombian Spanish</source>
 			</trans-unit>
 			<trans-unit id="nl_nl">
 				<source>Dutch</source>
 			</trans-unit>
-			<trans-unit id="fo_fo">
-				<source>Faroese</source>
-			</trans-unit>
-			<trans-unit id="sv_fi">
-				<source>Finland-Swedish</source>
-			</trans-unit>
-			<trans-unit id="fi_fi">
-				<source>Finnish</source>
-			</trans-unit>
-			<trans-unit id="nl_be">
-				<source>Flemish</source>
-			</trans-unit>
 			<trans-unit id="fr_fr">
 				<source>French</source>
-			</trans-unit>
-			<trans-unit id="gl_es">
-				<source>Galician</source>
 			</trans-unit>
 			<trans-unit id="de_de">
 				<source>German</source>
 			</trans-unit>
-			<trans-unit id="hi_in">
-				<source>Hindi</source>
-			</trans-unit>
-			<trans-unit id="hu_hu">
-				<source>Hungarian</source>
-			</trans-unit>
-			<trans-unit id="is_is">
-				<source>Icelandic</source>
-			</trans-unit>
 			<trans-unit id="it_it">
 				<source>Italian</source>
 			</trans-unit>
-			<trans-unit id="zh_cn">
-				<source>Mandarin Chinese</source>
-			</trans-unit>
-			<trans-unit id="es_mx">
-				<source>Mexican Spanish</source>
-			</trans-unit>
-			<trans-unit id="pt_pt">
-				<source>Portuguese</source>
-			</trans-unit>
-			<trans-unit id="ru_ru">
-				<source>Russian</source>
-			</trans-unit>
-			<trans-unit id="en_za">
-				<source>South African English</source>
-			</trans-unit>
 			<trans-unit id="es_es">
 				<source>Spanish</source>
-			</trans-unit>
-			<trans-unit id="sv_se">
-				<source>Swedish</source>
-			</trans-unit>
-			<trans-unit id="tr_tr">
-				<source>Turkish</source>
 			</trans-unit>
 			<trans-unit id="en_uk">
 				<source>UK English</source>
 			</trans-unit>
 			<trans-unit id="en_us">
 				<source>US English</source>
-			</trans-unit>
-			<trans-unit id="cy_cy">
-				<source>Welsh</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -8,5 +8,8 @@ plugin.tx_t3readspeaker {
 
 		# cat=ReadSpeaker/docReaderCode; type=string; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.docReaderCode
 		docReaderCode =
+
+		# cat=ReadSpeaker/useOldApi; type=boolean; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.useOldApi
+		useOldApi =
 	}
 }

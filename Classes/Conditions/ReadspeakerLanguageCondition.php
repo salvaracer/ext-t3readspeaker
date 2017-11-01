@@ -81,46 +81,10 @@ class ReadspeakerLanguageCondition extends \TYPO3\CMS\Core\Configuration\TypoScr
     */
     public function getReadspeakerLangVoices($langKey = NULL) {
         $voicesArray = array(
-            'es_us' => array(
-                array('', ''),
-                array('Carlos', 'Carlos'),
-                array('es_us_miguel', 'es_us_miguel'),
-                array('es_us_penelope', 'es_us_penelope'),
-                array('Ximena', 'Ximena'),
-            ),
-            'ar_ar' => array(
-                array('', ''),
-                array('Faris', 'Faris'),
-                array('leila22k', 'leila22k'),
-                array('mehdi22k', 'mehdi22k'),
-                array('Rola', 'Rola'),
-            ),
-            'en_au' => array(
-                array('', ''),
-                array('Jack', 'Jack'),
-                array('Karen', 'Karen'),
-                array('Lee', 'Lee'),
-            ),
-            'eu_es' => array(
-                array('', ''),
-            ),
             'pt_br' => array(
                 array('', ''),
                 array('pt_br_ricardo', 'pt_br_ricardo'),
                 array('pt_br_vitoria', 'pt_br_vitoria'),
-            ),
-            'fr_ca' => array(
-                array('', ''),
-                array('Amelie', 'Amelie'),
-                array('Nicolas', 'Nicolas'),
-            ),
-            'ca_es' => array(
-                array('', ''),
-                array('Empar', 'Empar'),
-                array('Jordi', 'Jordi'),
-            ),
-            'es_co' => array(
-                array('', ''),
             ),
             'nl_nl' => array(
                 array('', ''),
@@ -128,44 +92,16 @@ class ReadspeakerLanguageCondition extends \TYPO3\CMS\Core\Configuration\TypoScr
                 array('Ilse', 'Ilse'),
                 array('Xander', 'Xander'),
             ),
-            'fo_fo' => array(
-                array('', ''),
-                array('hanna22k', 'hanna22k'),
-                array('hanus22k', 'hanus22k'),
-            ),
-            'sv_fi' => array(
-                array('', ''),
-            ),
-            'fi_fi' => array(
-                array('', ''),
-            ),
-            'nl_be' => array(
-                array('', ''),
-            ),
             'fr_fr' => array(
                 array('', ''),
                 array('Elise', 'Elise'),
                 array('Thomas', 'Thomas'),
-            ),
-            'gl_es' => array(
-                array('', ''),
             ),
             'de_de' => array(
                 array('', ''),
                 array('de_hans', 'de_hans'),
                 array('de_marlene', 'de_marlene'),
                 array('Max', 'Max'),
-            ),
-            'hi_in' => array(
-                array('', ''),
-            ),
-            'hu_hu' => array(
-                array('', ''),
-            ),
-            'is_is' => array(
-                array('', ''),
-                array('is_dora', 'is_dora'),
-                array('is_karl', 'is_karl'),
             ),
             'it_it' => array(
                 array('', ''),
@@ -174,38 +110,11 @@ class ReadspeakerLanguageCondition extends \TYPO3\CMS\Core\Configuration\TypoScr
                 array('Luca', 'Luca'),
                 array('Paola', 'Paola'),
             ),
-            'zh_cn' => array(
-                array('', ''),
-            ),
-            'es_mx' => array(
-                array('', ''),
-                array('Carlos', 'Carlos'),
-                array('Paulina', 'Paulina'),
-            ),
-            'pt_pt' => array(
-                array('', ''),
-                array('Amalia', 'Amalia'),
-                array('Joana', 'Joana'),
-            ),
-            'ru_ru' => array(
-                array('', ''),
-            ),
-            'en_za' => array(
-                array('', ''),
-            ),
             'es_es' => array(
                 array('', ''),
                 array('Jorge', 'Jorge'),
                 array('Leonor', 'Leonor'),
                 array('Monica', 'Monica'),
-            ),
-            'sv_se' => array(
-                array('', ''),
-            ),
-            'tr_tr' => array(
-                array('', ''),
-                array('Kerem', 'Kerem'),
-                array('Zeynep', 'Zeynep'),
             ),
             'en_uk' => array(
                 array('', ''),
@@ -222,9 +131,6 @@ class ReadspeakerLanguageCondition extends \TYPO3\CMS\Core\Configuration\TypoScr
                 array('Kate', 'Kate'),
                 array('Paul', 'Paul'),
                 array('Sophie', 'Sophie'),
-            ),
-            'cy_cy' => array(
-                array('', ''),
             ),
         );
 

@@ -3,16 +3,14 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "t3readspeaker".
  *
- * Auto generated 05-07-2017 22:44
- *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
  * writing. "version" and "dependencies" must not be touched!
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array (
-  'title' => 'Readspeaker for TYPO3',
-  'description' => 'Integrate the readspeaker service to your website. Provides 30+ Languages, 50+ Voices, easy to use',
+  'title' => 'Readspeaker webReader for TYPO3',
+  'description' => 'Integrate the ReadSpeaker webReader service to your website. Provides 30+ Languages, 50+ Voices, easy to use',
   'category' => 'template',
   'author' => 'Salvatore Eckel',
   'author_email' => 'salvaracer@gmx.de',
@@ -20,7 +18,7 @@ $EM_CONF[$_EXTKEY] = array (
   'uploadfolder' => false,
   'createDirs' => '',
   'clearCacheOnLoad' => 1,
-  'version' => '1.2.1',
+  'version' => '2.0.0',
   'constraints' => 
   array (
     'depends' => 
