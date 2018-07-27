@@ -7,6 +7,8 @@ Will add the **ReadSpeaker webReader** Service to your website. Easy to use, mul
 
 [![Readspeaker webReader](http://img-ak.verticalresponse.com/media/f/3/a/f3a027ab0e/32430ba437/59fd45a3d7/library/ReadSpeaker-webReader-video-screenshot.jpg)](https://www.youtube.com/watch?v=zMtpLuOJ3m8)
 
+(Open the link in a new window if you have problems with watching the youtube video.)
+
 
 ## Installation
 
