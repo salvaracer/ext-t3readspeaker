@@ -43,7 +43,7 @@ Fluid usage
 Frontend reading
 
 .. figure:: ../Images/rsreading.png
-   :width: 689px
+   :width: 668px
    :alt: ReadSpeaker reading text
 
    ReadSpeaker reading text
@@ -51,7 +51,7 @@ Frontend reading
 Frontend closed
 
 .. figure:: ../Images/rsclosed.png
-   :width: 500px
+   :width: 159px
    :alt: ReadSpeaker Button
 
    ReadSpeaker Button
@@ -62,9 +62,11 @@ Frontend closed
 Installation
 ------------
 
-#. Install this extension
-#. Set your rs customer ID and CSS ID and your language in the CONSTANT EDITOR
-#. Add this code, where the readspeaker button should appear: <f:cObject typoscriptObjectPath="lib.t3readspeaker" />
+#.  Install this extension
+#.  Set your customer ID and CSS ID and your language in the CONSTANT EDITOR
+#.  Add this html code to an fluid template, where the ReadSpeaker webReader button should appear: <f:cObject typoscriptObjectPath="lib.t3readspeaker" data="{lang:'de_de',readid:'content123',urlencoded:'...'}" />
+
+All data-attributes are optional! The fallback are the values from the constant editor! If you leave emtpy "urlencoded", the used url will the frontend url of the current page!
 
 
 .. tip::
@@ -72,18 +74,13 @@ Installation
    Try the fluid inline style: {f:cObject(typoscriptObjectPath:'lib.t3readspeaker')}
 
 
-.. tip::
-
-   You can modify the button behaviour by adding some data attribute information to te fluid tag: <f:cObject typoscriptObjectPath="lib.t3readspeaker" data="{lang:'de_de',readid:'content123',urlencoded:''}" />
-
-
 Constant Editor
 
 .. figure:: ../Images/constants.png
-   :width: 500px
-   :alt: Constant Editor -> ReadSpeaker
+   :width: 753px
+   :alt: Constant Editor -> TYPO3 ReadSpeaker
 
    ReadSpeaker Settings
 
-   Set your "customer id", your "docreader id" and the "css read id"
+   Set your "customerid", your "readid" and "language" in the constant editor.
 
