@@ -15,11 +15,8 @@
 			<trans-unit id="constants.customerid">
 				<target state="translated"><![CDATA[Ihre ReadSpeaker Customer ID (Im ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></target>
 			</trans-unit>
-			<trans-unit id="constants.defaultReadId">
+			<trans-unit id="constants.readId">
 				<target state="translated"><![CDATA[ID des HTML Elements, dass de vorzulesenden Text enthält. (Schreibe "content", wenn ReadSpeaker den Text vorlesen soll von <div id="content">...</div>)]]></target>
-			</trans-unit>
-			<trans-unit id="constants.docReaderCode">
-				<target state="translated"><![CDATA[DocReader Code (Im ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></target>
 			</trans-unit>
 			<trans-unit id="constants.useOldApi">
 				<target state="translated"><![CDATA[Den alten ReadSpeaker Button benutzen anstatt den neuen "webReader")]]></target>

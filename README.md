@@ -11,13 +11,12 @@ Will add the **ReadSpeaker webReader** Service to your website. Easy to use, mul
 ## Installation
 
 1.  Install this extension
-2.  Set your rs customer ID and CSS ID in the CONSTANT EDITOR
+2.  Set your customer ID and CSS ID and your language in the CONSTANT EDITOR
 3.  Add this code, where the readspeaker button should appear:
 
     ```html
     <f:cObject typoscriptObjectPath="lib.t3readspeaker" />
     ```
-4.  Choose a language and a voice in your root page properties.
 
 
 **TIP**
@@ -30,9 +29,11 @@ Try the fluid inline style:
 
 **Another TIP**
 
-Add ReadSpeaker as an contentelement with EXT:typoscript2ce
-https://typo3.org/extensions/repository/view/typoscript2ce
+You can modify the button behaviour by adding some data attribute information to te fluid tag:
 
+```html
+<f:cObject typoscriptObjectPath="lib.t3readspeaker" data="{lang:'de_de',readid:'content123',urlencoded:''}" />
+```
 
 **We're open for contributions.**
 

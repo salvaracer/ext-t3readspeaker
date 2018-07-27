@@ -1,0 +1,15 @@
+plugin.tx_t3readspeaker {
+	settings {
+		# cat=ReadSpeaker/customerid; type=int+; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.customerid
+		customerid =
+
+		# cat=ReadSpeaker/lanaugage; type=options[es_us,ar_ar,en_au,eu_es,pt_br,fr_ca,ca_es,es_co,da_dk,nl_nl,fo_fo,sv_fi,fi_fi,nl_be,fr_fr,gl_es,de_de,el_gr,hi_in,hu_hu,is_is,it_it,zh_cn,es_mx,no_nb,no_nn,pt_pt,ro_ro,ru_ru,en_za,es_es,sv_se,tr_tr,en_uk,ur_pk,en_us,cy_cy]; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.language
+		lang = en_us
+
+		# cat=ReadSpeaker/readid; type=string; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.readid
+		readid =
+
+		# cat=ReadSpeaker/useOldApi; type=boolean; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.useOldApi
+		useOldApi =
+	}
+}

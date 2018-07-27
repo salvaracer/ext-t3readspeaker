@@ -15,11 +15,11 @@
 			<trans-unit id="constants.customerid">
 				<source><![CDATA[Your ReadSpeaker Customer ID (you can find in ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></source>
 			</trans-unit>
-			<trans-unit id="constants.defaultReadId">
-				<source><![CDATA[ID of the html element that contains the text to read. (Write "content", if ReadSpeaker should read text from <div id="content">...</div>)]]></source>
+			<trans-unit id="constants.language">
+				<source><![CDATA[Choose a language.]]></source>
 			</trans-unit>
-			<trans-unit id="constants.docReaderCode">
-				<source><![CDATA[DocReader Code (you can find in ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></source>
+			<trans-unit id="constants.readId">
+				<source><![CDATA[ID of the html element that contains the text to read. (Write "content", if ReadSpeaker should read text from <div id="content">...</div>)]]></source>
 			</trans-unit>
 			<trans-unit id="constants.useOldApi">
 				<source><![CDATA[Check this, if you want to use the old readspeaker button.]]></source>

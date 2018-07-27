@@ -1,4 +1,7 @@
 <?php
-if (!defined ('TYPO3_MODE')) die ('Access denied.');
 
-$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ",tx_t3readspeaker_lang,tx_t3readspeaker_voice";
+defined('TYPO3_MODE') || die('Access denied.');
+
+if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('flux')) {
+	\FluidTYPO3\Flux\Core::registerProviderExtensionKey('SalvatoreEckel.T3readspeaker', 'Content');
+}

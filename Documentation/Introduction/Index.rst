@@ -63,14 +63,18 @@ Installation
 ------------
 
 #. Install this extension
-#. Set your rs customer ID and CSS ID in the CONSTANT EDITOR
+#. Set your rs customer ID and CSS ID and your language in the CONSTANT EDITOR
 #. Add this code, where the readspeaker button should appear: <f:cObject typoscriptObjectPath="lib.t3readspeaker" />
-#. Choose a language and a voice in your root page properties.
 
 
 .. tip::
 
    Try the fluid inline style: {f:cObject(typoscriptObjectPath:'lib.t3readspeaker')}
+
+
+.. tip::
+
+   You can modify the button behaviour by adding some data attribute information to te fluid tag: <f:cObject typoscriptObjectPath="lib.t3readspeaker" data="{lang:'de_de',readid:'content123',urlencoded:''}" />
 
 
 Constant Editor
