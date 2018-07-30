@@ -9,17 +9,17 @@
 			<trans-unit id="voice">
 				<source>Voice Options</source>
 			</trans-unit>
+			<trans-unit id="constants.apiUrl">
+				<source><![CDATA[ReadSpeaker API Url)]]></source>
+			</trans-unit>
 			<trans-unit id="constants.customerid">
 				<source><![CDATA[Your ReadSpeaker Customer ID (you can find in ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></source>
 			</trans-unit>
 			<trans-unit id="constants.language">
-				<target><![CDATA[Sprache wählen]]></target>
+				<target><![CDATA[Choose a language]]></target>
 			</trans-unit>
 			<trans-unit id="constants.readid">
 				<source><![CDATA[ID of the html element that contains the text to read. (Write "content", if ReadSpeaker should read text from <div id="content">...</div>)]]></source>
-			</trans-unit>
-			<trans-unit id="constants.useOldApi">
-				<source><![CDATA[Check this, if you want to use the old readspeaker button.]]></source>
 			</trans-unit>
 		</body>
 	</file>

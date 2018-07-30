@@ -1,13 +1,8 @@
 # Include webReader API
 page.includeJS {
-    t3readspeaker           = //f1-eu.readspeaker.com/script/37/webReader/webReader.js?pids=wr
+    t3readspeaker           = {$plugin.tx_t3readspeaker.settings.apiUrl}
     t3readspeaker.external  = 1
 }
-
-# Use old API
-[globalVar = LIT:1 = {$plugin.tx_t3readspeaker.settings.useOldApi}]
-page.includeJS.t3readspeaker = //f1-eu.readspeaker.com/script/35/ReadSpeaker.js?pids=embhl
-[end]
 
 # Current url encoded
 lib.encodedCurrentUrl = TEXT
