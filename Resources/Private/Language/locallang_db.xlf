@@ -6,9 +6,6 @@
 			<trans-unit id="common.listen">
 				<source>Listen</source>
 			</trans-unit>
-			<trans-unit id="lang">
-				<source>ReadSpeaker Language [Flush system caches (red) if the voice options don't change, and save again]</source>
-			</trans-unit>
 			<trans-unit id="voice">
 				<source>Voice Options</source>
 			</trans-unit>
@@ -16,45 +13,13 @@
 				<source><![CDATA[Your ReadSpeaker Customer ID (you can find in ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></source>
 			</trans-unit>
 			<trans-unit id="constants.language">
-				<source><![CDATA[Choose a language.]]></source>
+				<target><![CDATA[Sprache wählen]]></target>
 			</trans-unit>
-			<trans-unit id="constants.readId">
+			<trans-unit id="constants.readid">
 				<source><![CDATA[ID of the html element that contains the text to read. (Write "content", if ReadSpeaker should read text from <div id="content">...</div>)]]></source>
 			</trans-unit>
 			<trans-unit id="constants.useOldApi">
 				<source><![CDATA[Check this, if you want to use the old readspeaker button.]]></source>
-			</trans-unit>
-			<trans-unit id="extconf.hint">
-				<source><![CDATA[Use the constant editor to set up this extension. ("Template" -> "Constant Editor" -> "ReadSpeaker")]]></source>
-			</trans-unit>
-			<trans-unit id="extconf.hint2">
-				<source><![CDATA[You can set up the language and voice in your page properties, sliding down the pagetree. If the voice options don't change after you changed the language, please flush the system caches (red) and save again.]]></source>
-			</trans-unit>
-
-			<!-- Languages -->
-			<trans-unit id="pt_br">
-				<source>Brazilian Portuguese</source>
-			</trans-unit>
-			<trans-unit id="nl_nl">
-				<source>Dutch</source>
-			</trans-unit>
-			<trans-unit id="fr_fr">
-				<source>French</source>
-			</trans-unit>
-			<trans-unit id="de_de">
-				<source>German</source>
-			</trans-unit>
-			<trans-unit id="it_it">
-				<source>Italian</source>
-			</trans-unit>
-			<trans-unit id="es_es">
-				<source>Spanish</source>
-			</trans-unit>
-			<trans-unit id="en_uk">
-				<source>UK English</source>
-			</trans-unit>
-			<trans-unit id="en_us">
-				<source>US English</source>
 			</trans-unit>
 		</body>
 	</file>

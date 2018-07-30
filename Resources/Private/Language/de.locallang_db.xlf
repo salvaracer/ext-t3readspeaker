@@ -6,52 +6,20 @@
 			<trans-unit id="common.listen">
 				<target state="translated">Vorlesen</target>
 			</trans-unit>
-			<trans-unit id="lang">
-				<target state="translated">RS Sprache [Leeren Sie den System-Cache (rot), wenn sich die verfügbaren Stimmen nicht aktualisieren, und speichern Sie erneut]</target>
-			</trans-unit>
 			<trans-unit id="voice">
 				<target state="translated">Verfügbare Stimmen</target>
 			</trans-unit>
 			<trans-unit id="constants.customerid">
 				<target state="translated"><![CDATA[Ihre ReadSpeaker Customer ID (Im ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></target>
 			</trans-unit>
-			<trans-unit id="constants.readId">
+			<trans-unit id="constants.language">
+				<source><![CDATA[Choose a language]]></source>
+			</trans-unit>
+			<trans-unit id="constants.readid">
 				<target state="translated"><![CDATA[ID des HTML Elements, dass de vorzulesenden Text enthält. (Schreibe "content", wenn ReadSpeaker den Text vorlesen soll von <div id="content">...</div>)]]></target>
 			</trans-unit>
 			<trans-unit id="constants.useOldApi">
 				<target state="translated"><![CDATA[Den alten ReadSpeaker Button benutzen anstatt den neuen "webReader")]]></target>
-			</trans-unit>
-			<trans-unit id="extconf.hint">
-				<target state="translated"><![CDATA[Benutze den Konstanten-Editor um diese Extension zu konfigurieren. ("Template" -> "Konstanten-Editor" -> "ReadSpeaker")]]></target>
-			</trans-unit>
-			<trans-unit id="extconf.hint2">
-				<target state="translated"><![CDATA[Die Vorlesesprache und Stimme wird in den Seiteneigenschaften eingestellt. Dieser Wert vererbt sich auf Unterseiten. Wenn sich die verfügbaren Stimmen nach dem Ändern der Sprache nicht aktualisieren, dann leeren Sie den System-Cache (rot), und speichern Sie erneut.]]></target>
-			</trans-unit>
-
-			<!-- Languages -->
-			<trans-unit id="pt_br">
-				<target state="translated">Brasilianisches Portugiesisch</target>
-			</trans-unit>
-			<trans-unit id="nl_nl">
-				<target state="translated">Niederländisch</target>
-			</trans-unit>
-			<trans-unit id="fr_fr">
-				<target state="translated">Französisch</target>
-			</trans-unit>
-			<trans-unit id="de_de">
-				<target state="translated">Deutsch</target>
-			</trans-unit>
-			<trans-unit id="it_it">
-				<target state="translated">Italienisch</target>
-			</trans-unit>
-			<trans-unit id="es_es">
-				<target state="translated">Spanisch</target>
-			</trans-unit>
-			<trans-unit id="en_uk">
-				<target state="translated">UK Englisch</target>
-			</trans-unit>
-			<trans-unit id="en_us">
-				<target state="translated">US Englisch</target>
 			</trans-unit>
 		</body>
 	</file>
