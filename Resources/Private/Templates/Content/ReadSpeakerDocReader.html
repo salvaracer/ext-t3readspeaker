@@ -28,7 +28,7 @@
 		</f:then>
 		<f:else>
 			<f:alias map="{absoluteUrl:'{f:cObject(typoscriptObjectPath:\'lib.t3readspeaker.siteurl\')}{settings.readFile}'}">
-				<f:cObject typoscriptObjectPath="lib.t3readspeaker.docReader" data="{windowid:record.uid,urlencoded:absoluteUrl}" />
+				<f:cObject typoscriptObjectPath="lib.t3readspeaker.docReader" data="{windowid:record.uid,urlencoded:absoluteUrl,btntext:settings.btnText}" />
 			</f:alias>
 		</f:else>
 	</f:if>
