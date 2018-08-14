@@ -3,7 +3,7 @@
 
 ## What does it do?
 
-Will add the **ReadSpeaker webReader** Service to your website. Easy to use, multi language and many voice options.
+Will add the **ReadSpeaker webReader** and **ReadSpeaker docReader** Service to your website. Easy to use, multi language and many voice options.
 
 [![Readspeaker webReader](http://img-ak.verticalresponse.com/media/f/3/a/f3a027ab0e/32430ba437/59fd45a3d7/library/ReadSpeaker-webReader-video-screenshot.jpg)](https://www.youtube.com/watch?v=zMtpLuOJ3m8)
 
@@ -29,9 +29,9 @@ All data-attributes are optional! The fallback are the values from the constant 
 {f:cObject(typoscriptObjectPath:'lib.t3readspeaker')}
 ```
 
-## Plugin
+## Plugins
 
-We offer an extra content element made with EXT:flux to place your ReadSpeaker webReader button where you want. If you want to use it in your contentElementWizard, make sure you have EXT:flux installed!
+We offer two content element made with EXT:flux to place your ReadSpeaker webReader button and your ReadSpeaker docReader Buttons where you want. If you want to use it in your contentElementWizard, make sure you have EXT:flux installed!
 
 ### We're open for contribution.
 

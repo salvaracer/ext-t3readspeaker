@@ -84,3 +84,8 @@ Constant Editor
 
    Set your "customerid", your "readid" and "language" in the constant editor.
 
+
+Plugins
+-------
+
+We offer two content element made with EXT:flux to place your ReadSpeaker webReader button and your ReadSpeaker docReader Buttons where you want. If you want to use it in your contentElementWizard, make sure you have EXT:flux installed!
