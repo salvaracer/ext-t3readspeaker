@@ -9,17 +9,29 @@
 			<trans-unit id="voice">
 				<target state="translated">Verfügbare Stimmen</target>
 			</trans-unit>
-			<trans-unit id="constants.apiUrl">
-				<target state="translated"><![CDATA[ReadSpeaker API Url)]]></target>
+			<trans-unit id="constants.webReader.apiurl">
+				<target state="translated"><![CDATA[ReadSpeaker webReader API Url]]></target>
+			</trans-unit>
+			<trans-unit id="constants.docReader.apiurl">
+				<target state="translated"><![CDATA[ReadSpeaker docReader API Url]]></target>
 			</trans-unit>
 			<trans-unit id="constants.customerid">
 				<target state="translated"><![CDATA[Ihre ReadSpeaker Customer ID (Im ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></target>
 			</trans-unit>
-			<trans-unit id="constants.language">
-				<source><![CDATA[Sprache wählen]]></source>
+			<trans-unit id="constants.lang">
+				<target><![CDATA[Sprache wählen]]></target>
 			</trans-unit>
 			<trans-unit id="constants.readid">
 				<target state="translated"><![CDATA[ID des HTML Elements, dass de vorzulesenden Text enthält. (Schreibe "content", wenn ReadSpeaker den Text vorlesen soll von <div id="content">...</div>)]]></target>
+			</trans-unit>
+			<trans-unit id="constants.docReaderid">
+				<target state="translated"><![CDATA[Ihre docReaderID um Dokumente mit dem docReader vorlesen zu lassen (Im ReadSpeaker Admin Portal -> Implementation Instructions) (//admin.readspeaker.com/portal/)]]></target>
+			</trans-unit>
+			<trans-unit id="constants.docReader.width">
+				<target state="translated"><![CDATA[Breite in Pixel des docReader Popups]]></target>
+			</trans-unit>
+			<trans-unit id="constants.docReader.height">
+				<target state="translated"><![CDATA[Höhe in Pixel des docReader Popups]]></target>
 			</trans-unit>
 		</body>
 	</file>
