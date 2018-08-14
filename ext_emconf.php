@@ -11,8 +11,8 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = [
-  'title' => 'Readspeaker webReader for TYPO3',
-  'description' => 'Integrate the ReadSpeaker webReader service to your website. Provides 30+ Languages, 50+ Voices, easy to use',
+  'title' => 'ReadSpeaker webReader + docReader for TYPO3',
+  'description' => 'Integrate ReadSpeaker webReader and docReader services to your website. Provides 30+ Languages, 50+ Voices, easy to use',
   'category' => 'template',
   'author' => 'Salvatore Eckel',
   'author_email' => 'salvaracer@gmx.de',
