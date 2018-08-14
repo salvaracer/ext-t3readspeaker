@@ -1,22 +1,39 @@
 # Include webReader API
 page.includeJS {
-    t3readspeaker           = {$plugin.tx_t3readspeaker.settings.apiUrl}
+    t3readspeaker           = {$plugin.tx_t3readspeaker.settings.webReader.apiurl}
     t3readspeaker.external  = 1
 }
 
 # Current url encoded
 lib.encodedCurrentUrl = TEXT
 lib.encodedCurrentUrl {
-	stdWrap.data = getIndpEnv:TYPO3_REQUEST_URL
+    stdWrap.data = getIndpEnv:TYPO3_REQUEST_URL
+    stdWrap.rawUrlEncode = 1
+}
+
+# Site root url
+lib.t3readspeaker.siteurl = TEXT
+lib.t3readspeaker.siteurl {
+	stdWrap.data = getIndpEnv:TYPO3_SITE_URL
 	stdWrap.rawUrlEncode = 1
 }
 
 # ReadSpeaker Main Button
-lib.t3readspeaker = COA
-lib.t3readspeaker {
-	wrap = <div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve"><a rel="nofollow"class="rsbtn_play" accesskey="L" title="Text vorlesen" href="//app-eu.readspeaker.com/cgi-bin/rsent|"><span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>Vorlesen</span></span></span><span class="rsbtn_right rsimg rsplay rspart"></span></a></div>
+lib.t3readspeaker.webReader = COA
+lib.t3readspeaker.webReader {
+    wrap = <div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve"><a rel="nofollow"class="rsbtn_play" accesskey="L" href="//app-eu.readspeaker.com/cgi-bin/rsent|
     5 = LOAD_REGISTER
     5 {
+        btntext.cObject = TEXT
+        btntext.cObject {
+            field = btntext
+            ifEmpty.cObject = TEXT
+            ifEmpty.cObject {
+                value.current = 1
+                ifEmpty.data = LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:common.listen
+                ifEmpty.insertData = 1
+            }
+        }
         customerid.cObject = TEXT
         customerid.cObject {
             value = {$plugin.tx_t3readspeaker.settings.customerid}
@@ -36,6 +53,7 @@ lib.t3readspeaker {
             ifEmpty.cObject = TEXT
             ifEmpty.cObject {
                 value.current = 1
+                ifEmpty = {$plugin.tx_t3readspeaker.settings.lang}
             }
         }
         urlencoded.cObject = TEXT
@@ -48,28 +66,186 @@ lib.t3readspeaker {
             }
         }
     }
-	20 = TEXT
-	20 {
-		wrap = ?customerid=|
-		data = register:customerid
-		required = 1
-	}
+    20 = TEXT
+    20 {
+        wrap = ?customerid=|
+        data = register:customerid
+        required = 1
+    }
     30 = TEXT
     30 {
-		wrap = &amp;lang=|
-		data = register:lang
-		required = 1
+        wrap = &amp;lang=|
+        data = register:lang
+        required = 1
     }
-	50 = TEXT
-	50 {
-		wrap = &amp;readid=|
-		data = register:readid
-		required = 1
-	}
-	60 = TEXT
-	60 {
-		wrap = &amp;url=|
-		data = register:urlencoded
-		required = 1
-	}
+    50 = TEXT
+    50 {
+        wrap = &amp;readid=|
+        data = register:readid
+        required = 1
+    }
+    60 = TEXT
+    60 {
+        wrap = &amp;url=|"><span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>
+        data = register:urlencoded
+        required = 1
+    }
+    70 = TEXT
+    70 {
+        wrap = |</span></span></span><span class="rsbtn_right rsimg rsplay rspart"></span></a></div>
+        data = register:btntext
+        required = 1
+    }
+}
+
+# ReadSpeaker docReader HTML Button
+lib.t3readspeaker.docReader = COA
+lib.t3readspeaker.docReader {
+    1 = COA
+    1 {
+        wrap = <script> | </script>
+        5 = LOAD_REGISTER
+        5 {
+            lang.cObject = TEXT
+            lang.cObject {
+                field = lang
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                    value.current = 1
+                    ifEmpty = {$plugin.tx_t3readspeaker.settings.lang}
+                }
+            }
+            windowid.cObject = TEXT
+            windowid.cObject {
+                wrap = openPopDoc|
+                field = windowid
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                    value.current = 1
+                    ifEmpty = NewWindow
+                }
+            }
+            width.cObject = TEXT
+            width.cObject {
+                field = width
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                    value.current = 1
+                    ifEmpty = {$plugin.tx_t3readspeaker.settings.docreader.width}
+                }
+            }
+            height.cObject = TEXT
+            height.cObject {
+                field = height
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                    value.current = 1
+                    ifEmpty = {$plugin.tx_t3readspeaker.settings.docreader.height}
+                }
+            }
+        }
+        10 = TEXT
+        10 {
+            noTrimWrap = | function | (url) {fenster = window.open(url, |
+            data = register:windowid
+        }
+        11 = TEXT
+        11 {
+            wrap = "|",
+            data = register:windowid
+        }
+        20 = TEXT
+        20 {
+            wrap = "width=|,
+            data = register:width
+        }
+        30 = TEXT
+        30 {
+            wrap = height=|,status=yes,scrollbars=yes,resizable=yes");fenster.focus();}
+            data = register:height
+        }
+    }
+    2 = COA
+    2 {
+        wrap = <a href="#" |</a>
+        5 = LOAD_REGISTER
+        5 {
+            btntext.cObject = TEXT
+            btntext.cObject {
+                field = btntext
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                    value.current = 1
+                    ifEmpty.data = LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:common.listen
+                    ifEmpty.insertData = 1
+                }
+            }
+            apiurldoc.cObject = TEXT
+            apiurldoc.cObject {
+                value = {$plugin.tx_t3readspeaker.settings.docreader.apiurl}
+            }
+            docreaderid.cObject = TEXT
+            docreaderid.cObject {
+                field = docreaderid
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                    value.current = 1
+                    ifEmpty = {$plugin.tx_t3readspeaker.settings.docreader.id}
+                }
+            }
+            urlencoded.cObject = TEXT
+            urlencoded.cObject {
+                field = urlencoded
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                    value.current = 1
+                }
+            }
+            title.cObject = TEXT
+            title.cObject {
+                field = title
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                    value.current = 1
+                }
+            }
+        }
+        9 = TEXT
+        9 {
+            wrap = onclick="|
+            data = register:windowid
+        }
+        10 = TEXT
+        10 {
+            wrap = ('|
+            data = register:apiurldoc
+        }
+        20 = TEXT
+        20 {
+            wrap = ?cid=|
+            data = register:docreaderid
+        }
+        25 = TEXT
+        25 {
+            wrap = &amp;lang=|
+            data = register:lang
+            required = 1
+        }
+
+        30 = TEXT
+        30 {
+            wrap = &amp;url=|'); return false;" 
+            data = register:urlencoded
+        }
+        40 = TEXT
+        40 {
+            wrap = title="|" rel="nofollow">
+            data = register:title
+        }
+        50 = TEXT
+        50 {
+            wrap = <img src="/typo3conf/ext/t3readspeaker/ext_icon.gif" alt="ReadSpeaker"> |
+            data = register:btntext
+        }
+    }
 }
