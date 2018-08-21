@@ -24,7 +24,7 @@
 <f:section name="Main">
 	<f:if condition="{setings.forceAbsolute}">
 		<f:then>
-			<f:cObject typoscriptObjectPath="lib.t3readspeaker.docReader" data="{windowid:record.uid,urlencoded:settings.readFile}" />
+			<f:cObject typoscriptObjectPath="lib.t3readspeaker.docReader" data="{windowid:record.uid,urlencoded:settings.readFile,btntext:settings.btnText}" />
 		</f:then>
 		<f:else>
 			<f:alias map="{absoluteUrl:'{f:cObject(typoscriptObjectPath:\'lib.t3readspeaker.siteurl\')}{settings.readFile}'}">
