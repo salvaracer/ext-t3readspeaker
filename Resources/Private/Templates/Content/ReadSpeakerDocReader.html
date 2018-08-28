@@ -22,7 +22,7 @@
 </f:section>
 
 <f:section name="Main">
-	<f:if condition="{setings.forceAbsolute}">
+	<f:if condition="{settings.forceAbsolute}">
 		<f:then>
 			<f:cObject typoscriptObjectPath="lib.t3readspeaker.docReader" data="{windowid:record.uid,urlencoded:settings.readFile,btntext:settings.btnText}" />
 		</f:then>
