@@ -2,6 +2,8 @@
 
 namespace SalvatoreEckel\T3readspeaker\Em;
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 /**
  * CUstom html output for constants and pagets.
  *
@@ -19,8 +21,10 @@ class ReadmeViewer {
 
 		$code = '';
 
-		if (file_exists(__DIR__ . '/../t3readspeaker/README.md')) {
-			$code = urlencode(file_get_contents(__DIR__ . '/../t3readspeaker/README.md'));
+		$readmeDir = ExtensionManagementUtility::extPath('t3readspeaker') . '/README.md';
+
+		if (file_exists($readmeDir)) {
+			$code = urlencode(file_get_contents($readmeDir));
 		}
 
 		$search = array('#58#', '#59#', '#44#');
