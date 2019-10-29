@@ -1,2 +1,2 @@
-# cat=info/1; type=user[EXT:t3readspeaker/class.tx_t3readspeaker.php:&tx_t3readspeaker->readmemd]; label=README.MD
-readmemd = 
+# cat=info/1; type=user[SalvatoreEckel\T3readspeaker\Em\ReadmeViewer->readmemd]; label=README.MD
+readmemd =

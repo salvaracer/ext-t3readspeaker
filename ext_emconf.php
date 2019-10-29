@@ -20,7 +20,7 @@ $EM_CONF[$_EXTKEY] = [
   'uploadfolder' => false,
   'createDirs' => '',
   'clearCacheOnLoad' => 1,
-  'version' => '2.3.1',
+  'version' => '2.3.2',
   'constraints' => 
   [
     'depends' => 
@@ -29,10 +29,6 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'conflicts' => 
     [
-    ],
-    'suggests' => 
-    [
-      'typoscript2ce' => '1.0.0-1.2.99',
     ],
   ],
   'clearcacheonload' => true,

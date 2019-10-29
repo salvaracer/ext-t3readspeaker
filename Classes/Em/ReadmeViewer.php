@@ -1,12 +1,16 @@
 <?php
 
+namespace SalvatoreEckel\T3readspeaker\Em;
+
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 /**
  * CUstom html output for constants and pagets.
  *
  * @author Salvatore Eckel <salvaracer@gmx.de>
  */
-class tx_t3readspeaker {
-	
+class ReadmeViewer {
+
 	/**
 	 * Show the rendered markdown
 	 * @param array $params: Contains fieldName and fieldValue.
@@ -17,8 +21,10 @@ class tx_t3readspeaker {
 
 		$code = '';
 
-		if (file_exists(__DIR__ . '/../t3readspeaker/README.md')) {
-			$code = urlencode(file_get_contents(__DIR__ . '/../t3readspeaker/README.md'));
+		$readmeDir = ExtensionManagementUtility::extPath('t3readspeaker') . '/README.md';
+
+		if (file_exists($readmeDir)) {
+			$code = urlencode(file_get_contents($readmeDir));
 		}
 
 		$search = array('#58#', '#59#', '#44#');
@@ -30,7 +36,7 @@ class tx_t3readspeaker {
 
 		return $code;
 	}
-	
+
 }
 
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/t3readspeaker/class.tx_t3readspeaker.php'])	{
