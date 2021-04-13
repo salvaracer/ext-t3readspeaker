@@ -17,9 +17,8 @@ $EM_CONF[$_EXTKEY] = [
   'author' => 'Salvatore Eckel',
   'author_email' => 'salvaracer@gmx.de',
   'state' => 'stable',
-  'uploadfolder' => false,
   'createDirs' => '',
-  'clearCacheOnLoad' => 1,
+  'clearCacheOnLoad' => true,
   'version' => '2.3.2',
   'constraints' => 
   [
@@ -31,7 +30,7 @@ $EM_CONF[$_EXTKEY] = [
     [
     ],
   ],
-  'clearcacheonload' => true,
+  'clearCacheOnLoad' => true,
   'author_company' => NULL,
 ];
 

@@ -38,7 +38,3 @@ class ReadmeViewer {
 	}
 
 }
-
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/t3readspeaker/class.tx_t3readspeaker.php'])	{
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/t3readspeaker/class.tx_t3readspeaker.php']);
-}
