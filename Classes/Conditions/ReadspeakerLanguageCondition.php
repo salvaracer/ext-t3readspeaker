@@ -1,39 +1,37 @@
 <?php
+
+/*
+ * This file is part of the "t3readspeaker" Extension for TYPO3 CMS.
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ */
+
 namespace SalvatoreEckel\T3readspeaker\Conditions;
 
-/**
-* Readspeaker Language condition
-*/
-class ReadspeakerLanguageCondition extends \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractCondition {
-    /**
-    * Return the Readspeaker Language Key of the current rotline
-    *
-    * @param array $conditionParameters
-    * @return bool
-    */
-    public function matchCondition(array $conditionParameters) {
-        $result = ($conditionParameters[0] == $this->getRootlineReadspeakerLanguageKey()) ? TRUE : FALSE;
-        return $result;
+use TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractCondition;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\RootlineUtility;
+
+class ReadspeakerLanguageCondition extends AbstractCondition
+{
+    public function matchCondition(array $conditionParameters): bool
+    {
+        return $conditionParameters[0] == $this->getRootlineReadspeakerLanguageKey();
     }
 
-    /**
-    * Return the key of the Readspeaker Language in the current rootline
-    *
-    * @param int $pageUid
-    * @return string
-    */
-    public function getRootlineReadspeakerLanguageKey($pageUid = NULL) {
+    public function getRootlineReadspeakerLanguageKey(int $pageUid = null): string
+    {
         $key = '';
-        $pageUid = $pageUid ? $pageUid : $this->getPagetreePageUid();
+        $pageUid = $pageUid ?: $this->getPagetreePageUid();
 
-        # Enable Backend Ajax Route | Keep for troubleshootig
+        // Enable Backend Ajax Route | Keep for troubleshootig
         if (isset($_GET['type']) && isset($_GET['pageUid'])) {
             $pageUid = $_GET['pageUid'];
         }
 
-        # Get the current siteroot page
-        $sysPage = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Frontend\Page\PageRepository::class);
-        $rootline = $sysPage->getRootLine($pageUid, '', true);
+        // Get the current siteroot page
+        $rootline = GeneralUtility::makeInstance(RootlineUtility::class, $pageUid, '')->get();
 
         $pointer = (count($rootline) - 1);
         for ($i=$pointer; $i >= 0; $i--) {
@@ -49,7 +47,8 @@ class ReadspeakerLanguageCondition extends \TYPO3\CMS\Core\Configuration\TypoScr
     *
     * @return int
     */
-    public function getPagetreePageUid() {
+    public function getPagetreePageUid()
+    {
         $pageUid = isset($GLOBALS['SOBE']) ? $GLOBALS['SOBE']->id : '';
         if (empty($pageUid) && isset($GLOBALS['TSFE']) && $GLOBALS['TSFE']->id > 0) {
             $pageUid = $GLOBALS['TSFE']->id;
@@ -73,66 +72,61 @@ class ReadspeakerLanguageCondition extends \TYPO3\CMS\Core\Configuration\TypoScr
         return $pageUid ? $pageUid : 1;
     }
 
-    /**
-    * Return the key of the Readspeaker Language upin the current rootline
-    *
-    * @param string $langKey
-    * @return array
-    */
-    public function getReadspeakerLangVoices($langKey = NULL) {
-        $voicesArray = array(
-            'pt_br' => array(
-                array('', ''),
-                array('pt_br_ricardo', 'pt_br_ricardo'),
-                array('pt_br_vitoria', 'pt_br_vitoria'),
-            ),
-            'nl_nl' => array(
-                array('', ''),
-                array('Claire', 'Claire'),
-                array('Ilse', 'Ilse'),
-                array('Xander', 'Xander'),
-            ),
-            'fr_fr' => array(
-                array('', ''),
-                array('Elise', 'Elise'),
-                array('Thomas', 'Thomas'),
-            ),
-            'de_de' => array(
-                array('', ''),
-                array('de_hans', 'de_hans'),
-                array('de_marlene', 'de_marlene'),
-                array('Max', 'Max'),
-            ),
-            'it_it' => array(
-                array('', ''),
-                array('it_carla', 'it_carla'),
-                array('it_giorgio', 'it_giorgio'),
-                array('Luca', 'Luca'),
-                array('Paola', 'Paola'),
-            ),
-            'es_es' => array(
-                array('', ''),
-                array('Jorge', 'Jorge'),
-                array('Leonor', 'Leonor'),
-                array('Monica', 'Monica'),
-            ),
-            'en_uk' => array(
-                array('', ''),
-                array('Alice', 'Alice'),
-                array('Alice', 'Alice'),
-                array('en_gb_amy', 'en_gb_amy'),
-                array('en_gb_brian', 'en_gb_brian'),
-                array('Serena', 'Serena'),
-            ),
-            'en_us' => array(
-                array('', ''),
-                array('Ashley', 'Ashley'),
-                array('Jeff', 'Jeff'),
-                array('Kate', 'Kate'),
-                array('Paul', 'Paul'),
-                array('Sophie', 'Sophie'),
-            ),
-        );
+    public function getReadspeakerLangVoices(string $langKey = null): array
+    {
+        $voicesArray = [
+            'pt_br' => [
+                ['', ''],
+                ['pt_br_ricardo', 'pt_br_ricardo'],
+                ['pt_br_vitoria', 'pt_br_vitoria'],
+            ],
+            'nl_nl' => [
+                ['', ''],
+                ['Claire', 'Claire'],
+                ['Ilse', 'Ilse'],
+                ['Xander', 'Xander'],
+            ],
+            'fr_fr' => [
+                ['', ''],
+                ['Elise', 'Elise'],
+                ['Thomas', 'Thomas'],
+            ],
+            'de_de' => [
+                ['', ''],
+                ['de_hans', 'de_hans'],
+                ['de_marlene', 'de_marlene'],
+                ['Max', 'Max'],
+            ],
+            'it_it' => [
+                ['', ''],
+                ['it_carla', 'it_carla'],
+                ['it_giorgio', 'it_giorgio'],
+                ['Luca', 'Luca'],
+                ['Paola', 'Paola'],
+            ],
+            'es_es' => [
+                ['', ''],
+                ['Jorge', 'Jorge'],
+                ['Leonor', 'Leonor'],
+                ['Monica', 'Monica'],
+            ],
+            'en_uk' => [
+                ['', ''],
+                ['Alice', 'Alice'],
+                ['Alice', 'Alice'],
+                ['en_gb_amy', 'en_gb_amy'],
+                ['en_gb_brian', 'en_gb_brian'],
+                ['Serena', 'Serena'],
+            ],
+            'en_us' => [
+                ['', ''],
+                ['Ashley', 'Ashley'],
+                ['Jeff', 'Jeff'],
+                ['Kate', 'Kate'],
+                ['Paul', 'Paul'],
+                ['Sophie', 'Sophie'],
+            ],
+        ];
 
         return $voicesArray[$langKey];
     }

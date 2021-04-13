@@ -22,7 +22,8 @@
         }
     },
     "require-dev": {
-        "ssch/typo3-rector": "^0.9.23"
+        "ssch/typo3-rector": "^0.9.23",
+        "typo3/coding-standards": "^0.3.0"
     },
     "extra": {
         "typo3/cms": {

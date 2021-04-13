@@ -5,25 +5,22 @@ declare(strict_types=1);
 use Rector\Core\Configuration\Option;
 use Rector\Core\ValueObject\PhpVersion;
 use Rector\PostRector\Rector\NameImportingPostRector;
-use Ssch\TYPO3Rector\Rector\Composer\ExtensionComposerRector;
-use Ssch\TYPO3Rector\Rector\General\ExtEmConfRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Ssch\TYPO3Rector\Set\Typo3SetList;
 use Ssch\TYPO3Rector\Configuration\Typo3Option;
-use Ssch\TYPO3Rector\Rector\v9\v0\InjectAnnotationRector;
+use Ssch\TYPO3Rector\Rector\Composer\ExtensionComposerRector;
+use Ssch\TYPO3Rector\Set\Typo3SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     // get parameters
     $parameters = $containerConfigurator->parameters();
 
     // Define what rule sets will be applied
-//    $parameters->set(Option::SETS, [
-//        Typo3SetList::TYPO3_76,
-//        Typo3SetList::TYPO3_87,
-//        Typo3SetList::TYPO3_95,
-//        Typo3SetList::TYPO3_104,
-//        Typo3SetList::TYPO3_11,
-//    ]);
+    $parameters->set(Option::SETS, [
+        Typo3SetList::TYPO3_76,
+        Typo3SetList::TYPO3_87,
+        Typo3SetList::TYPO3_95,
+        Typo3SetList::TYPO3_104,
+    ]);
 
     // FQN classes are not imported by default. If you don't do it manually after every Rector run, enable it by:
     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
@@ -42,8 +39,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     // If you only want to process one/some TYPO3 extension(s), you can specify its path(s) here.
     // If you use the option --config change __DIR__ to getcwd()
-     $parameters->set(Option::PATHS, [
-        __DIR__ . '/composer.json',
+    $parameters->set(Option::PATHS, [
+        __DIR__ . '/Classes',
      ]);
 
     // If you set option Option::AUTO_IMPORT_NAMES to true, you should consider excluding some TYPO3 files.
