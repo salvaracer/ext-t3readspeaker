@@ -8,14 +8,6 @@
     "require": {
         "typo3/cms-core": "^10.4"
     },
-    "authors": [
-        {
-            "name": "Salvatore Eckel",
-            "email": "salvaracer@gmx.de",
-            "homepage": "https://github.com/salvaracer/ext-t3readspeaker/",
-            "role": "Developer"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "SalvatoreEckel\\T3readspeaker\\": "Classes/"
