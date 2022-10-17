@@ -1,0 +1,32 @@
+plugin.tx_t3readspeaker {
+    settings {
+        webReader {
+            # cat=Readspeaker webReader/apiurl; type=string; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.webReader.apiurl
+            apiurl = //f1-eu.readspeaker.com/script/37/webReader/webReader.js?pids=wr
+        }
+
+        # cat=Readspeaker webReader/lang; type=options[es_us,ar_ar,en_au,eu_es,pt_br,fr_ca,ca_es,es_co,da_dk,nl_nl,fo_fo,sv_fi,fi_fi,nl_be,fr_fr,gl_es,de_de,el_gr,hi_in,hu_hu,is_is,it_it,zh_cn,es_mx,no_nb,no_nn,pt_pt,ro_ro,ru_ru,en_za,es_es,sv_se,tr_tr,en_uk,ur_pk,en_us,cy_cy]; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.lang
+        lang = en_us
+
+        # cat=Readspeaker webReader/customerid; type=int+; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.customerid
+        customerid =
+
+        # cat=Readspeaker webReader/readid; type=string; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.readid
+        readid =
+
+        docreader {
+            # cat=Readspeaker docReader/apiurl; type=string; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.docReader.apiurl
+            apiurl = //docreader.readspeaker.com/docreader/
+
+            # cat=ReadSpeaker docReader/id; type=string; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.docReader.id
+            id =
+
+            # cat=ReadSpeaker docReader/width; type=string; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.docReader.width
+            width = 1200
+
+            # cat=ReadSpeaker docReader/height; type=string; label=LLL:EXT:t3readspeaker/Resources/Private/Language/locallang_db.xlf:constants.docReader.height
+            height = 700
+        }
+
+    }
+}

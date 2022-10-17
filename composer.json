@@ -1,37 +1,28 @@
 {
-  "name": "salvaracer/t3readspeaker",
-  "type": "typo3-cms-extension",
-  "description": "Integrate ReadSpeaker webReader and docReader services to your website. Provides 30+ Languages, 50+ Voices, easy to use",
-  "homepage": "",
-  "license": ["GPL-3.0+"],
-  "require": {
-    "typo3/cms-core": "^7.6 || ^8.7 || ^9.5"
-  },
-  "replace": {
-    "t3readspeaker": "self.version"
-  },
-  "support": {
-      "docs": "https://github.com/salvaracer/ext-t3readspeaker/"
-  },
-  "authors": [
-    {
-        "name": "Salvatore Eckel",
-        "email": "salvaracer@gmx.de",
-        "homepage": "https://github.com/salvaracer/ext-t3readspeaker/",
-        "role": "Developer"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "SalvatoreEckel\\T3readspeaker\\": "Classes/"
+    "name": "salvaracer/t3readspeaker",
+    "type": "typo3-cms-extension",
+    "description": "Integrate ReadSpeaker webReader and docReader services to your website. Provides 30+ Languages, 50+ Voices, easy to use",
+    "license": [
+        "GPL-3.0+"
+    ],
+    "require": {
+        "typo3/cms-core": "^10.4"
     },
-    "psr-0": { "": "." }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "SalvatoreEckel\\T3readspeaker\\": "Tests/",
-      "TYPO3\\CMS\\Core\\Tests\\": "../../typo3/sysext/core/Tests/",
-      "TYPO3\\CMS\\Fluid\\Tests\\": "../../typo3/sysext/fluid/Tests/"
+    "autoload": {
+        "psr-4": {
+            "SalvatoreEckel\\T3readspeaker\\": "Classes/"
+        }
+    },
+    "require-dev": {
+        "ssch/typo3-rector": "^0.9.23",
+        "typo3/coding-standards": "^0.3.0"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "t3readspeaker"
+        }
+    },
+    "replace": {
+        "typo3-ter/t3readspeaker": "self.version"
     }
-  }
 }
